@@ -1,0 +1,24 @@
+
+pip install -r requirements.txt
+
+
+First, we need to set up the environment variables. You need to create a .env file with:
+
+GROQ_API_KEY=your_groq_api_key
+YOUTUBE_EMAIL=your_youtube_email
+YOUTUBE_PASSWORD=your_youtube_password
+
+
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+
+pip install selenium python-dotenv
+
+
+.\init_cookies.bat
+
+
+python test_setup.py
+
+python update_cookies.py
+
+streamlit run app.py
